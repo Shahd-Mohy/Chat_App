@@ -26,7 +26,7 @@ class ChatPage extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               backgroundColor: kBlueColor,
-              title: Text(
+              title:const  Text(
                 "Talksy App",
                 style: TextStyle(fontSize: 22, fontFamily: "Pacifico"),
               ),
@@ -59,18 +59,18 @@ class ChatPage extends StatelessWidget {
                       });
                       controller.clear();
                       _controller.animateTo(0,
-                          duration: Duration(milliseconds: 10),
+                          duration:const Duration(milliseconds: 10),
                           curve: Curves.fastOutSlowIn);
                     },
                     decoration: InputDecoration(
                       hintText: "Send Your Message!",
-                      suffixIcon: Icon(Icons.send_rounded),
+                      suffixIcon:const Icon(Icons.send_rounded),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: kBlueColor)),
+                          borderSide:const  BorderSide(color: kBlueColor)),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: kBlueColor)),
+                          borderSide: const BorderSide(color: kBlueColor)),
                     ),
                   ),
                 )
@@ -78,10 +78,8 @@ class ChatPage extends StatelessWidget {
             ),
           );
         } else {
-          return Scaffold(
-            body: Container(
-              child: Center(child: Text("Loading Waitttt....")),
-            ),
+          return const Scaffold(
+            body: Center(child: Text("Loading Waitttt....")),
           );
         }
       },

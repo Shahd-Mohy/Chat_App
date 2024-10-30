@@ -1,6 +1,5 @@
 import 'package:chat_app/constants.dart';
 import 'package:chat_app/helper/show_snak_bar.dart';
-import 'package:chat_app/pages/login_page.dart';
 import 'package:chat_app/widgets/custom_button.dart';
 import 'package:chat_app/widgets/custom_text_field.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -36,18 +35,18 @@ class _RegisterPageState extends State<RegisterPage> {
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Spacer(
+                 const  Spacer(
                     flex: 2,
                   ),
                   Image.asset("assets/images/apprricon.jpg"),
-                  Text(
+                 const Text(
                     "Talksy App",
                     style: TextStyle(fontSize: 38, fontFamily: "Pacifico"),
                   ),
-                  Spacer(
+                 const Spacer(
                     flex: 1,
                   ),
-                  Row(
+                const  Row(
                     children: [],
                   ),
                   CustomTextFormField(
@@ -103,7 +102,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                     const Text(
                         "already have an account? ",
                         style: TextStyle(color: Colors.black, fontSize: 14),
                       ),
@@ -111,7 +110,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: Text(
+                        child:const Text(
                           "Login",
                           style: TextStyle(
                               color: Colors.black,
@@ -121,7 +120,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       )
                     ],
                   ),
-                  Spacer(
+                 const Spacer(
                     flex: 3,
                   ),
                 ],

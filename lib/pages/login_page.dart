@@ -1,6 +1,5 @@
 import 'package:chat_app/constants.dart';
 import 'package:chat_app/helper/show_snak_bar.dart';
-import 'package:chat_app/pages/register_page.dart';
 import 'package:chat_app/widgets/custom_button.dart';
 import 'package:chat_app/widgets/custom_text_field.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -32,18 +31,18 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Spacer(
+                const Spacer(
                   flex: 2,
                 ),
                 Image.asset("assets/images/apprricon.jpg"),
-                Text(
+                const Text(
                   "Talksy App",
                   style: TextStyle(fontSize: 38, fontFamily: "Pacifico"),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
-                Row(
+                const Row(
                   children: [],
                 ),
                 CustomTextFormField(
@@ -73,7 +72,8 @@ class _LoginPageState extends State<LoginPage> {
                       setState(() {});
                       try {
                         await loginUser();
-                        Navigator.pushNamed(context, 'ChatPage', arguments: email);
+                        Navigator.pushNamed(context, 'ChatPage',
+                            arguments: email);
                       } on FirebaseAuthException catch (ex) {
                         if (ex.code == 'user-not-found') {
                           showSnakBar(context, "No user found.");
@@ -87,10 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                       }
                       isLoading = false;
                       setState(() {});
-                    }
-                    else{}
-                    
-
+                    } else {}
                   },
                 ),
                 const SizedBox(
@@ -99,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "don\'t have an account? ",
                       style: TextStyle(color: Colors.black, fontSize: 14),
                     ),
@@ -107,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                       onTap: () {
                         Navigator.pushNamed(context, "RegisterPage");
                       },
-                      child: Text(
+                      child: const Text(
                         " Register",
                         style: TextStyle(
                             color: Colors.black,
@@ -117,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                     )
                   ],
                 ),
-                Spacer(
+                const Spacer(
                   flex: 3,
                 ),
               ],
@@ -129,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Future<void> loginUser() async {
-    UserCredential user = await FirebaseAuth.instance
+    await FirebaseAuth.instance
         .signInWithEmailAndPassword(email: email!, password: password!);
   }
 }

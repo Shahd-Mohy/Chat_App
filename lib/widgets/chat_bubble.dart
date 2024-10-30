@@ -12,9 +12,9 @@ class ChatBubble extends StatelessWidget {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(
-        padding: EdgeInsets.only(left: 16, top: 16, bottom: 16, right: 16),
-        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        decoration: BoxDecoration(
+        padding:const  EdgeInsets.only(left: 16, top: 16, bottom: 16, right: 16),
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(32),
             topRight: Radius.circular(32),
@@ -24,7 +24,7 @@ class ChatBubble extends StatelessWidget {
         ),
         child: Text(
           message.message,
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
+          style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
         ),
       ),
     );
@@ -41,9 +41,9 @@ class ChatBubbleTwo extends StatelessWidget {
     return Align(
       alignment: Alignment.centerRight,
       child: Container(
-        padding: EdgeInsets.only(left: 16, top: 16, bottom: 16, right: 16),
-        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.only(left: 16, top: 16, bottom: 16, right: 16),
+        margin:const  EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        decoration:const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(32),
             topRight: Radius.circular(32),
@@ -53,7 +53,7 @@ class ChatBubbleTwo extends StatelessWidget {
         ),
         child: Text(
           message.message,
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
+          style:const TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
         ),
       ),
     );
