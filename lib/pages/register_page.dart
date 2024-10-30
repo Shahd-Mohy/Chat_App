@@ -72,11 +72,11 @@ class _RegisterPageState extends State<RegisterPage> {
                     tittle: "Register",
                     onTap: () async {
                       if (formKey.currentState!.validate()) {
-                        isLoading = true;
+                        isLoading = true;           
                         setState(() {});
                         try {
                           await registerUser();
-                          Navigator.pushNamed(context, 'ChatPage');
+                          Navigator.pushNamed(context, 'ChatPage', arguments: email);
                         } on FirebaseAuthException catch (ex) {
                           if (ex.code == 'weak-password') {
                             showSnakBar(context, "The password is too weak.");
